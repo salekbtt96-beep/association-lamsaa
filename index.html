@@ -51,5 +51,20 @@ function applyLanguage(lang){
 document.getElementById('langToggle').addEventListener('click',()=>applyLanguage(currentLang==='ar'?'fr':'ar'));
 document.getElementById('mobileLangToggle').addEventListener('click',e=>{e.preventDefault();applyLanguage(currentLang==='ar'?'fr':'ar');</script>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+ <script>
+if (window.location.hash.includes("invite_token") &&
+    !window.location.pathname.startsWith("/admin/")) {
+  window.location.replace("/admin/" + window.location.hash);
+}
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", function(user) {
+    if (!user) {
+      window.netlifyIdentity.on("login", function() {
+        window.location.href = "/admin/";
+      });
+    }
+  });
+}
+</script>
 </body>
 </html>
