@@ -16,9 +16,9 @@ collections:
     create: true
     identifier_field: "title_ar"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    extension: "md"
+        extension: "md"
     editor:
-  preview: false
+      preview: false
     fields:
       - label: "العنوان بالعربية"
         name: "title_ar"
