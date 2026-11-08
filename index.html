@@ -49,5 +49,7 @@ function applyLanguage(lang){
  document.querySelector('meta[name="description"]').content=isFr?'Site officiel de l’Association Lamsa pour la Culture, le Sport et l’Action Sociale.':'الموقع الرسمي لجمعية لمسة للثقافة والرياضة والعمل الاجتماعي A.L.C.S.A';
 }
 document.getElementById('langToggle').addEventListener('click',()=>applyLanguage(currentLang==='ar'?'fr':'ar'));
-document.getElementById('mobileLangToggle').addEventListener('click',e=>{e.preventDefault();applyLanguage(currentLang==='ar'?'fr':'ar');closeMenu();});
-</script></body></html>
+document.getElementById('mobileLangToggle').addEventListener('click',e=>{e.preventDefault();applyLanguage(currentLang==='ar'?'fr':'ar');</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</body>
+</html>
