@@ -15,7 +15,7 @@ collections:
     folder: "content/articles"
     create: true
     identifier_field: "title_ar"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+   slug: "{{year}}-{{month}}-{{day}}-{{fields.title_ar}}"     
     extension: "md"
     fields:
       - { label: "العنوان بالعربية", name: "title_ar", widget: "string" }
