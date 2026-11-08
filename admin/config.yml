@@ -1,12 +1,10 @@
 backend:
-  name: github
-  repo: salekbtt96-beep/association-lamsaa
+  name: git-gateway
   branch: main
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
-locale: "ar"
 publish_mode: simple
 
 collections:
@@ -16,30 +14,12 @@ collections:
     create: true
     identifier_field: "title_ar"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-        extension: "md"
-    editor:
-      preview: false
+    extension: "md"
     fields:
-      - label: "العنوان بالعربية"
-        name: "title_ar"
-        widget: "string"
-      - label: "العنوان بالفرنسية"
-        name: "title_fr"
-        widget: "string"
-      - label: "تاريخ النشر"
-        name: "date"
-        widget: "datetime"
-      - label: "الصورة"
-        name: "image"
-        widget: "image"
-        required: false
-      - label: "النص بالعربية"
-        name: "body"
-        widget: "markdown"
-      - label: "النص بالفرنسية"
-        name: "body_fr"
-        widget: "markdown"
-      - label: "نشر المقال"
-        name: "published"
-        widget: "boolean"
-        default: true
+      - { label: "العنوان بالعربية", name: "title_ar", widget: "string" }
+      - { label: "العنوان بالفرنسية", name: "title_fr", widget: "string" }
+      - { label: "تاريخ النشر", name: "date", widget: "datetime" }
+      - { label: "الصورة", name: "image", widget: "image", required: false }
+      - { label: "النص بالعربية", name: "body", widget: "markdown" }
+      - { label: "النص بالفرنسية", name: "body_fr", widget: "markdown" }
+      - { label: "نشر المقال", name: "published", widget: "boolean", default: true }
